@@ -1,0 +1,42 @@
+```mermaid
+flowchart TD
+  A["Observe & Identify Problem Behavior"] --> B{"Minor (Staff-Managed)?\nMajor (Admin-Managed)?"}
+
+  B -->|Major| MA["Admin Referral\n– Immediate Office\n– Parent Contact\n– Signature\n– SWIS Data Entry"]
+  B -->|Minor| C["Staff-Managed:\nUse Tier 1 Strategies"]
+
+  subgraph Tier1["Tier 1 ➤ Universal Supports"]
+    direction TB
+    C1["Teach Expectations\n(Be Safe, Be Kind, Be Responsible)"]
+    C2["Positive Routines & Visuals"]
+    C3["Behavior-Specific Praise\n(4:1 ratio)"]
+    C4["In-Class “Calm Corner”\n(Think Spot)"]
+    C5["Buddy Classroom Break"]
+    C6["Quick Social Conference"]
+  end
+
+  C --> C1
+  C1 --> C2 --> C3 --> C4 --> C5 --> C6 --> D{"Behavior Changed?"}
+
+  D -->|Yes| E["Reinforce & Recognize\nCorrected Behavior\n(PBIS Acknowledgment)"]
+  D -->|No| F["Document 3 Minors OR\nEscalate-Flagged Behaviors"]
+
+  F --> G{"3 Minors in 30 Days\nor “Escalate”?"}
+  G -->|No| H["Send Confirmation Email\nto Teacher:\n“Thank you… (#<count>)”"]
+  G -->|Yes| I["Move to Tier 2\nAdmin-Managed"]
+
+  subgraph Tier2["Tier 2 ➤ Targeted Supports"]
+    direction TB
+    I1["Check-In/Check-Out (CICO)\nDaily Mentor Check"]
+    I2["Self-Monitoring Chart"]
+    I3["Behavior Contract\n(with Goals & Rewards)"]
+    I4["Small-Group Social Skills"]
+    I5["Restorative Circle / Mediation"]
+    I6["Parent/Guardian Collaborative Plan"]
+  end
+
+  I --> I1 --> I2 --> I3 --> I4 --> I5 --> I6 --> J["Append to Major Sheet\n+ AI-Generated Letters"]
+  J --> K["Email Teacher, Secretary, Admin:\n“AUTO-Escalation #<count>”"]
+
+  style Tier1 fill:#DEF8E3,stroke:#2E7D32,stroke-width:2px
+  style Tier2 fill:#FFF3E0,stroke:#EF6C00,stroke-width:2px
